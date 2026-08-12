@@ -1,0 +1,38 @@
+.Services_cards{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 30px;
+}
+.card{
+    padding: 45px 25px;
+    border: 2px solid transparent;
+    border-radius: 12px;
+    display: flex;  
+    flex-direction: column;
+    gap: 5px;
+    background-color: rgba(131, 131, 131, 0.05);
+}
+.card:hover{
+    background-color: rgba(131, 131, 131, 0.1);
+    border-color: #8B623B;
+    transform: scale(0.95);
+    transition: 0.5s;
+}
+.card i{
+    font-size: 32px;
+    color: #df8033;
+    margin-bottom: 10px;
+}
+.card h3{
+    font-family: 'Playfair', serif;
+    font-size: 22px;
+    font-weight: 600;
+    color: #000;
+}
+.card p{
+    font-family: 'Playfair', serif;
+    font-size: 15px;
+    color: #000;
+    margin-top: 10px;
+}
+

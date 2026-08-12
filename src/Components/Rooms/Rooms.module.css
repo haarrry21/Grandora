@@ -1,0 +1,183 @@
+.Rooms_container {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.header small {
+  font-size: 40px;
+  font-weight: 600;
+  gap: 0.5px;
+}
+
+.header h2{
+  font-size: 35px;
+  font-weight: 500;
+  font-family: "Playfair Display", serif;
+  margin: 30px 0;
+  gap: 0.5px;
+}
+
+.header span {
+  font-size: 45px;
+  color: #8b623b;
+  font-weight: 600;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+}
+
+.cardContainer {
+  perspective: 1200px;
+}
+
+.cardFace {
+  min-height: 280px;
+  border-radius: 18px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  padding: 1rem;
+  color: #fff;
+}
+
+.cardInner {
+  width: 100%;
+  min-height: 280px;
+  border-radius: 18px;
+  background: linear-gradient(145deg, #fffaf7, #f2ebe4);
+  box-shadow: 0 18px 35px rgba(17, 24, 39, 0.12);
+  transform-style: preserve-3d;
+  transition: transform 0.7s cubic-bezier(0.2, 1, 0.3, 1);
+  position: relative;
+}
+
+.isFlipped {
+  transform: rotateY(180deg);
+}
+
+.cardFaceFront {
+  background:
+    linear-gradient(180deg, rgba(17, 24, 39, 0.25), rgba(17, 24, 39, 0.65)),
+    linear-gradient(135deg, #c29b71, #7b5d44);
+}
+
+.cardFaceFront1 {
+  background:
+    linear-gradient(180deg, rgba(17, 24, 39, 0.25), rgba(17, 24, 39, 0.65)),
+    linear-gradient(135deg, #c29b71 0%, #7b5d44 45%, #4b382c 100%);
+}
+
+.cardButton,
+.bookButton {
+  border: none;
+  border-radius: 999px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.cardButton {
+  background: rgba(255, 255, 255, 0.92);
+  color: #2f241a;
+  padding: 0.75rem 1rem;
+}
+
+.cardButton:hover,
+.bookButton:hover {
+  transform: translateY(-1px);
+  opacity: 0.95;
+}
+
+.cardBack {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.9rem;
+  position: absolute;
+  inset: 0;
+  backface-visibility: hidden;
+  transform: rotateY(180deg);
+  background: linear-gradient(145deg, #fffaf7, #f2ebe4);
+  color: #1f2937;
+  padding: 1rem;
+  border-radius: 18px;
+}
+
+.price p {
+  margin: 0;
+  color: #8b623b;
+  font-size: 1.1rem;
+  font-weight: 700;
+}
+
+.cardContent {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.cardContent h3 {
+  margin: 0;
+  color: #1f2937;
+  font-size: 1.2rem;
+}
+
+.cardFront {
+  backface-visibility: hidden;
+  position: absolute;
+  inset: 0;
+}
+
+.cardFront {
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  color: #fff;
+}
+
+.cardContent p {
+  text-align: center;
+  margin: 0;
+  color: #4b5563;
+  font-size: 0.95rem;
+}
+
+.bookNow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+}
+
+.bookButton {
+  background: #8b623b;
+  color: #fff;
+  padding: 0.7rem 1rem;
+}
+
+.bookNow i {
+  color: #8b623b;
+  font-size: 1.1rem;
+}
+
+.cardContainer:focus {
+  outline: none;
+}
+
+@media screen and (max-width:1100px) {
+  .cards{
+    grid-template-columns: repeat(2,1fr);
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .cards {grid-template-columns: repeat(1,1fr);
+  }
+}
+
+

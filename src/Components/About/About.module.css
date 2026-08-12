@@ -1,0 +1,48 @@
+.about_wrapper{
+    flex-direction: row;
+}
+.about_img{
+    width: 60%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.about_img img{
+    height: 90%;
+    width: 90%;
+}
+.about_content{
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    padding: 50px 30px;
+    gap: 15px;
+}
+.about_content p{ 
+    font-size: 20px;
+    font-weight: 500;
+    color: #000;
+}
+.Cards{
+    display: grid;
+    flex-direction: column;
+    grid-template-columns: repeat(3,1fr);
+    gap: 30px;
+    margin-top: 20px;
+    font-family: 'Playfair', serif;
+}
+.Cards p{
+    padding: 15px 35px;
+    border: 1px solid #9d7e54;
+    border-radius: 25px;
+    font-size: 42px;
+    line-height: 30px;
+    text-align: center;
+    font-weight: 600;
+    background-color: #fef1f1;
+}
+.Cards p span{
+    font-size: 25px;
+    font-family: 'Playfair', serif;
+    display: block;
+}
