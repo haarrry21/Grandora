@@ -1,0 +1,171 @@
+.bookingPage {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 120px 24px 60px;
+  background-image: url('../../assets/banner-2.jpg');
+  background-size: cover;
+  background-position: center;
+}
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(12, 12, 12, 0.7);
+}
+
+.bookingCard {
+  position: relative;
+  z-index: 1;
+  width: min(1100px, 100%);
+  background: rgba(18, 18, 18, 0.82);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 24px;
+  box-shadow: 0 24px 50px rgba(0, 0, 0, 0.35);
+  padding: 38px;
+  backdrop-filter: blur(8px);
+}
+
+.headerBlock {
+  margin-bottom: 28px;
+  text-align: center;
+}
+
+.eyebrow {
+  margin: 0 0 10px;
+  color: #d9a953;
+  font-size: 12px;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+.headerBlock h1 {
+  margin: 0;
+  color: #fff;
+  font-size: clamp(32px, 5vw, 56px);
+  font-family: 'Playfair', serif;
+}
+
+.subtitle {
+  max-width: 650px;
+  margin: 14px auto 0;
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 17px;
+  line-height: 1.7;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+}
+
+.fieldRow {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 20px;
+}
+
+.field,
+.fieldFull {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.field label,
+.fieldFull label {
+  color: #f9e9d6;
+  font-size: 13px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.field input,
+.field select,
+.fieldFull textarea {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 14px 16px;
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.06);
+  color: #fff;
+  font: inherit;
+  outline: none;
+}
+
+.field input::placeholder,
+.fieldFull textarea::placeholder {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.field input::-webkit-calendar-picker-indicator {
+  filter: invert(1);
+}
+
+.field select option,
+.fieldFull textarea {
+  color: #111;
+}
+
+.fieldFull textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+.actionRow {
+  display: flex;
+  justify-content: flex-end;
+  gap: 16px;
+  margin-top: 8px;
+}
+
+.primaryButton,
+.secondaryButton {
+  border: none;
+  border-radius: 999px;
+  padding: 15px 24px;
+  font-weight: 700;
+  font-size: 15px;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.primaryButton {
+  background: linear-gradient(135deg, #d9a953, #c88d2d);
+  color: #111;
+}
+
+.secondaryButton {
+  background: transparent;
+  color: #fff;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+}
+
+.primaryButton:hover,
+.secondaryButton:hover {
+  transform: translateY(-2px);
+}
+
+@media (max-width: 768px) {
+  .bookingCard {
+    padding: 26px 18px;
+  }
+
+  .fieldRow {
+    grid-template-columns: 1fr;
+  }
+
+  .actionRow {
+    flex-direction: column-reverse;
+  }
+
+  .primaryButton,
+  .secondaryButton {
+    width: 100%;
+  }
+}

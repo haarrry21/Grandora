@@ -1,7 +1,7 @@
 import { useEffect, useRef } from 'react';
 import navCSS from './Nav.module.css';
 
-function Nav() {
+function Nav({ onBookClick, onBlogClick }) {
   const menu = useRef(null);
   const navbar = useRef(null);
 
@@ -29,7 +29,7 @@ function Nav() {
   return (
     <nav className={navCSS.navWrapper} ref={navbar}>
       <div className={navCSS.logo}>
-        <a href="#">Grandora</a>
+        <a href="#home">Grandora</a>
       </div>
 
       <ul className={navCSS.menuList} ref={menu}>
@@ -38,11 +38,11 @@ function Nav() {
         <li><a href="#services">Category</a></li>
         <li><a href="#rooms">Rooms</a></li>
         <li><a href="#testimonials">Testimonials</a></li>
-        <li><a href="#">Blogs</a></li>
+        <li><a type="button" className={navCSS.blogLinkButton} onClick={onBlogClick}>Blogs</a></li>
       </ul>
 
       <div className={navCSS.navBtnGroup}>
-        <button type="button" className={navCSS.btn}>Book Now</button>
+        <button type="button" className={navCSS.btn} onClick={onBookClick}>Book Now</button>
         <button
           type="button"
           className={navCSS.bars}
