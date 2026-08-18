@@ -46,3 +46,73 @@
     font-family: 'Playfair', serif;
     display: block;
 }
+
+/* Tablet - Stack layout vertically */
+@media screen and (max-width: 1100px) {
+    .about_wrapper{
+        flex-direction: column;
+    }
+    .about_img{
+        width: 100%;
+        margin-bottom: 30px;
+    }
+    .about_content{
+        width: 100%;
+        padding: 30px 20px;
+    }
+    .Cards{
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+    .about_content p{
+        font-size: 18px;
+    }
+}
+
+/* Mobile - 1 column cards */
+@media screen and (max-width: 768px) {
+    .about_img img{
+        height: 100%;
+        width: 100%;
+    }
+    .about_content{
+        padding: 25px 15px;
+        gap: 12px;
+    }
+    .about_content p{
+        font-size: 16px;
+        font-weight: 400;
+    }
+    .Cards{
+        grid-template-columns: 1fr;
+        gap: 15px;
+        margin-top: 15px;
+    }
+    .Cards p{
+        padding: 12px 25px;
+        font-size: 32px;
+        line-height: 25px;
+    }
+    .Cards p span{
+        font-size: 18px;
+    }
+}
+
+/* Small mobile */
+@media screen and (max-width: 480px) {
+    .about_content{
+        padding: 20px 12px;
+        gap: 10px;
+    }
+    .about_content p{
+        font-size: 14px;
+    }
+    .Cards p{
+        padding: 10px 20px;
+        font-size: 28px;
+        line-height: 20px;
+    }
+    .Cards p span{
+        font-size: 16px;
+    }
+}

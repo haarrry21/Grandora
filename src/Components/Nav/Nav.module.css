@@ -137,3 +137,38 @@
         left: 0;
     }
 }
+
+/* Small mobile devices */
+@media screen and (max-width: 760px) {
+    .navWrapper {
+        padding: 0 0.5rem;
+        height: 70px;
+    }
+    .logo a {
+        font-size: 40px;
+    }
+    .btn {
+        padding: 0.5rem 0.8rem;
+        font-size: 13px;
+    }
+    .navBtnGroup {
+        gap: 10px;
+    }
+}
+
+/* Extra small mobile */
+@media screen and (max-width: 380px) {
+    .navWrapper {
+        height: 60px;
+    }
+    .logo a {
+        font-size: 32px;
+    }
+    .navBtnGroup {
+        gap: 8px;
+    }
+    .btn {
+        padding: 0.4rem 0.6rem;
+        font-size: 12px;
+    }
+}

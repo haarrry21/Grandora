@@ -1,7 +1,7 @@
 import { useEffect, useRef } from 'react';
 import navCSS from './Nav.module.css';
 
-function Nav({ onBookClick, onBlogClick }) {
+  const Nav = ({ onBookClick, onBlogClick }) => {
   const menu = useRef(null);
   const navbar = useRef(null);
 
